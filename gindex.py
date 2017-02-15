@@ -94,19 +94,3 @@ httpd = socketserver.TCPServer(("",PORT), Handler)
 print("Successful!")
 httpd.serve_forever()
 
-
-#Exception handling:Avoid FileNotFoundError
-#while True:
-#    try:
-#        with open('DFS_BFS.md','r',encoding='utf8') as f:
-#            s = f.read()
-#        break
-#    except FileNotFoundError:
-#        url = input('Index Markdown Not Found!')
-#html = mk(s)
-#with open('preview.html','w',encoding='utf8') as f:
-#    f.write(html)
-#
-##End of run,open preview.html automatically by default browser
-#print('preview.html is generated successfully!')
-#webbrowser.open('preview.html')

@@ -7,7 +7,6 @@ parser.add_argument("--mode", "-m", default = 0, type = int, help = "The mode of
 parser.add_argument("--file", "-f", default = None, help = "The name of the file.")
 parser.add_argument("--url", "-u", default = None, help = "The sharing link.")
 parser.add_argument("--delay", "-d", default = None, type = int, help = "The dealy time.")
-parser.add_argument("--folder", default = None, help = "The folder of saved files.")
 
 args = parser.parse_args()
 
