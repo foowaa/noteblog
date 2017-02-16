@@ -10,9 +10,9 @@ parser.add_argument("--delay", "-d", default = None, type = int, help = "The dea
 
 args = parser.parse_args()
 
-with open("./source.json",'r') as source_file:
+with open("../config/source.json",'r') as source_file:
 	source = json.load(source_file)
-	folder = "./public/articles/"
+	folder = "../public/articles/"
 	if args.delay is None:
 		delay = source['delay']
 	else:
@@ -20,12 +20,12 @@ with open("./source.json",'r') as source_file:
 
 	if args.mode==0:
 		if args.file is None:
-			if not os.path.exists(os.path.join(r"./public/articles/",source['file'])):
-				os.makedirs(os.path.join(r"./public/articles/",source['file']))
+			if not os.path.exists(os.path.join(r"../public/articles/",source['file'])):
+				os.makedirs(os.path.join(r"../public/articles/",source['file']))
 			file = os.path.join(folder, source['file'], 'index.html')
 		else:
-			if not os.path.exists(os.path.join(r"./public/articles/",args.file)):
-				os.makedirs(os.path.join(r"./public/articles/",args.file))
+			if not os.path.exists(os.path.join(r"../public/articles/",args.file)):
+				os.makedirs(os.path.join(r"../public/articles/",args.file))
 			file = os.path.join(folder, args.file, 'index.html')
 		if args.url is None:
 			url = source['url']
@@ -40,8 +40,8 @@ with open("./source.json",'r') as source_file:
          else:
              file = []
              for x in source['file']:
-                 if not os.path.exists(os.path.join(r"./public/articles/",x)):
-                     os.makedirs(os.path.join(r"./public/articles/",x))
+                 if not os.path.exists(os.path.join(r"../public/articles/",x)):
+                     os.makedirs(os.path.join(r"../public/articles/",x))
                  file.append(os.path.join(folder, x, 'index.html'))
                  url = [y for y in source['url']]
 

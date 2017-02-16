@@ -1,9 +1,9 @@
 import os
 
-markdown_dir = r"./md"
-base_dir = r"./public"
-http_dir = r"./public/articles"
-index_dir = r"./public/pages"
+markdown_dir = r"../md"
+base_dir = r"../public"
+http_dir = r"../public/articles"
+index_dir = r"../public/pages"
 
 isExist_markdown = os.path.exists(markdown_dir)
 isExist_base = os.path.exists(base_dir)
